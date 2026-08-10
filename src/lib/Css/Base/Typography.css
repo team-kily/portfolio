@@ -1,0 +1,149 @@
+/* Typography
+ * Headlines: Space Grotesk
+ * Body / UI: Manrope
+ */
+
+@layer base {
+    @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/fonts/SpaceGrotesk-VariableFont_wght.woff2') format('woff2-variations');
+        font-weight: 300 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Manrope';
+        src: url('/fonts/Manrope-VariableFont_wght.woff2') format('woff2-variations');
+        font-weight: 200 800;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@theme {
+    --font-space-grotesk: 'Space Grotesk', sans-serif;
+    --font-manrope: 'Manrope', sans-serif;
+}
+
+@layer base {
+    html {
+        @apply font-manrope;
+    }
+
+    .hero {
+        @apply font-space-grotesk
+        text-[3.5rem] leading-[0.92] font-semibold tracking-[-0.045em]
+        md:text-[5.5rem]
+        lg:text-[7.5rem];
+    }
+
+    h1,
+    .h1 {
+        @apply font-space-grotesk
+        text-[2.75rem] leading-[0.95] font-semibold tracking-[-0.04em]
+        md:text-[4rem]
+        lg:text-[5rem];
+    }
+
+    h2,
+    .h2 {
+        @apply font-space-grotesk
+        text-[2.25rem] leading-none font-semibold tracking-[-0.035em]
+        md:text-[3rem]
+        lg:text-[4rem];
+    }
+
+    h3,
+    .h3 {
+        @apply font-space-grotesk
+        text-[1.75rem] leading-[1.05] font-medium tracking-[-0.025em]
+        md:text-[2rem]
+        lg:text-[2.5rem];
+    }
+
+    h4,
+    .h4 {
+        @apply font-space-grotesk
+        text-xl leading-[1.1] font-medium tracking-[-0.02em]
+        md:text-2xl
+        lg:text-[1.75rem];
+    }
+
+    h5,
+    .h5 {
+        @apply font-space-grotesk
+        text-lg leading-[1.15] font-medium
+        md:text-xl;
+    }
+
+
+    /* Body */
+
+    .body-l {
+        @apply text-lg leading-[1.6] font-normal
+        md:text-xl;
+    }
+
+    .body-m {
+        @apply text-base leading-[1.6] font-normal;
+    }
+
+    .body-s {
+        @apply text-sm leading-[1.5] font-normal;
+    }
+
+
+    /* Richtext / Content */
+
+    .ce-bodytext {
+        h2 {
+            @apply not-first:mt-16 mb-6
+            font-space-grotesk
+            text-[2.25rem] leading-none font-semibold tracking-[-0.035em]
+            md:text-[3rem]
+            lg:text-[4rem];
+        }
+
+        h3 {
+            @apply not-first:mt-12 mb-5
+            font-space-grotesk
+            text-[1.75rem] leading-[1.05] font-medium tracking-[-0.025em]
+            md:text-[2rem]
+            lg:text-[2.5rem];
+        }
+
+        p {
+            @apply mb-5 last:mb-0;
+        }
+
+        a {
+            @apply underline underline-offset-4 hover:no-underline;
+        }
+
+        ul {
+            @apply mb-5 list-disc pl-6 last:mb-0;
+        }
+
+        ol {
+            @apply mb-5 list-decimal pl-6 last:mb-0;
+        }
+    }
+
+
+    /* Labels / UI */
+
+    .label-l {
+        @apply text-lg leading-[1.2] font-medium tracking-[-0.02em]
+        md:text-xl;
+    }
+
+    .label-m {
+        @apply text-sm leading-[1.2] font-medium tracking-[-0.01em]
+        md:text-base;
+    }
+
+    .label-s {
+        @apply text-xs leading-[1.2] font-semibold tracking-[0.1em] uppercase;
+    }
+}

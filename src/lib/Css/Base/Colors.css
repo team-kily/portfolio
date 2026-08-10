@@ -1,0 +1,11 @@
+@theme {
+	/* primary */
+	--color-dark: #171716;
+	--color-brand: #c97845;
+	--color-light: #f2e9dc;
+	--color-accent: #8fa68a;
+
+	/* helper */
+    --color-success: #00ff00;
+    --color-error: #ff0000;
+}
