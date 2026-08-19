@@ -73,8 +73,13 @@
 						'Anfragen und die damit verbundenen personenbezogenen Daten speichern wir nur so lange, wie dies zur Bearbeitung erforderlich ist. Anschließend werden sie gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten, die Geltendmachung oder Abwehr von Ansprüchen oder eine weitere vertragliche Beziehung eine längere Speicherung erfordern. Technische Protokolldaten werden nach den für den Hostingdienst festgelegten Fristen gelöscht.'
 					],
 					[
-						'Cookies, Analyse und externe Medien',
-						'Diese Website setzt keine eigenen Analyse-, Werbe- oder Trackingdienste ein und lädt keine extern gehosteten Schriftarten. Es werden keine nicht technisch erforderlichen Cookies gesetzt. Externe Websites wie GitHub, Instagram, YouTube oder das digitale Sammelheft werden erst aufgerufen, wenn du den jeweiligen Link aktiv auswählst. Ab diesem Zeitpunkt gelten die Datenschutzbestimmungen des jeweiligen Anbieters.'
+						'Reichweitenmessung mit Vercel Web Analytics',
+						'Wir verwenden Vercel Web Analytics, um die Nutzung dieser Website statistisch auszuwerten. Dabei werden insbesondere Seitenaufrufe, aufgerufene Pfade, Referrer, Zeitpunkt, ungefähres Herkunftsland sowie Browser-, Betriebssystem- und Gerätetyp in aggregierter Form verarbeitet. Vercel Web Analytics verwendet keine Cookies und ordnet die Daten keiner dauerhaft identifizierbaren Person zu. Zur Unterscheidung von Besuchen wird aus der eingehenden Anfrage ein Hash gebildet, der nach 24 Stunden verworfen wird.',
+						'Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt darin, Reichweite und Nutzung unseres Angebots zu verstehen und die Website zu verbessern. Anbieter ist Vercel Inc.; die Hinweise zur möglichen Verarbeitung in den USA und zu den eingesetzten Garantien gelten wie im Abschnitt „Hosting über Vercel“ beschrieben.'
+					],
+					[
+						'Cookies und externe Medien',
+						'Diese Website setzt keine nicht technisch erforderlichen Cookies ein und lädt keine extern gehosteten Schriftarten. Externe Websites wie GitHub, Instagram, YouTube oder das digitale Sammelheft werden erst aufgerufen, wenn du den jeweiligen Link aktiv auswählst. Ab diesem Zeitpunkt gelten die Datenschutzbestimmungen des jeweiligen Anbieters.'
 					],
 					[
 						'Empfänger und Drittlandübermittlung',
@@ -167,8 +172,13 @@
 						'We retain enquiries and related personal data only for as long as necessary to respond. They are then deleted unless statutory retention obligations, the establishment or defence of legal claims, or an ongoing contractual relationship require longer storage. Technical logs are deleted in accordance with the retention settings of the hosting service.'
 					],
 					[
-						'Cookies, analytics and external media',
-						'This website does not use proprietary analytics, advertising or tracking services and does not load externally hosted fonts. No non-essential cookies are set. External websites such as GitHub, Instagram, YouTube or the digital collector album are contacted only when you actively select the relevant link. Their own privacy policies apply from that point.'
+						'Audience measurement with Vercel Web Analytics',
+						'We use Vercel Web Analytics to obtain aggregate statistics about the use of this website. The data processed includes page views, requested paths, referrers, timestamps, approximate country, browser, operating system and device type. Vercel Web Analytics does not use cookies or associate the data with a permanently identifiable individual. A hash derived from the incoming request is used to distinguish visits and is discarded after 24 hours.',
+						'The legal basis is Article 6(1)(f) GDPR. Our legitimate interest is understanding the reach and use of the website and improving it. The provider is Vercel Inc.; the information about possible processing in the United States and the safeguards used applies as described in the “Hosting by Vercel” section.'
+					],
+					[
+						'Cookies and external media',
+						'This website does not set non-essential cookies and does not load externally hosted fonts. External websites such as GitHub, Instagram, YouTube or the digital collector album are contacted only when you actively select the relevant link. Their own privacy policies apply from that point.'
 					],
 					[
 						'Recipients and international transfers',
