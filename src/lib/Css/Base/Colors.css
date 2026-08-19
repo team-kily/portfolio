@@ -1,11 +1,10 @@
 @theme {
-	/* primary */
-	--color-dark: #171716;
-	--color-brand: #c97845;
-	--color-light: #f2e9dc;
-	--color-accent: #8fa68a;
+	--color-dark: #171412;
+	--color-brand: #bd642f;
+	--color-light: #f3e5d2;
+	--color-accent: #173a29;
+	--color-warm-brown: #5b3021;
 
-	/* helper */
-    --color-success: #00ff00;
-    --color-error: #ff0000;
+	--color-success: #00ff00;
+	--color-error: #ff0000;
 }

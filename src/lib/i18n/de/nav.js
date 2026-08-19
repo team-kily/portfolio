@@ -1,7 +1,7 @@
 export default {
 	hero: 'Home',
 	projects: 'Projekte',
-	about: 'Über uns',
-	game_dev: 'Spielentwicklung',
+	about: 'Über',
+	game_dev: 'Entwicklung',
 	contact: 'Kontakt'
 };

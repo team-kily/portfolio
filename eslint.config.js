@@ -36,7 +36,6 @@ export default defineConfig(
 	svelte.configs.prettier,
 
 	{
-		rules: {
-		}
+		rules: {}
 	}
 );

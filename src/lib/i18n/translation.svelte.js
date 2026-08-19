@@ -22,7 +22,6 @@ export const locale = $state({
 
 export function setLocale(language) {
 	if (!translations[language]) {
-		console.warn(`Unknown locale: ${language}`);
 		return;
 	}
 

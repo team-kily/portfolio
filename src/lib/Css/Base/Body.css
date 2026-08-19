@@ -1,11 +1,21 @@
-body {
-    --body-bg-color: theme('colors.dark');
-    --body-text-color: theme('color.light');
-    color: var(--body-text-color);
-    background-color: var(--body-bg-color);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smooth: never;
-    scrollbar-gutter: stable;
+html {
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
 
+@media (max-width: 80rem), (max-height: 52rem) {
+	html {
+		scroll-snap-type: y proximity;
+	}
+}
+
+body {
+	--body-bg-color: theme('colors.dark');
+	--body-text-color: theme('color.light');
+	color: var(--body-text-color);
+	background-color: var(--body-bg-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: never;
+	scrollbar-gutter: stable;
 }
