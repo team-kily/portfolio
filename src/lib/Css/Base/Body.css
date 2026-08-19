@@ -9,6 +9,12 @@ html {
 	}
 }
 
+@media (max-width: 47.99rem) {
+	html {
+		scroll-snap-type: none;
+	}
+}
+
 body {
 	--body-bg-color: theme('colors.dark');
 	--body-text-color: theme('color.light');

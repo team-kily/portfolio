@@ -91,6 +91,7 @@
 			min-height: 38svh;
 			align-items: flex-end;
 			padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
+			scroll-snap-align: none;
 		}
 
 		footer {

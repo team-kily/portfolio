@@ -1837,6 +1837,7 @@
 
 	@media (max-width: 47.99rem) {
 		section {
+			scroll-snap-align: none;
 			scroll-margin-top: 0;
 			padding-top: calc(var(--header-height) + 1.5rem);
 			padding-bottom: calc(5.25rem + env(safe-area-inset-bottom));
@@ -1960,6 +1961,11 @@
 		.project-copy h3,
 		.project-card-small .project-copy h3 {
 			font-size: clamp(2rem, 10vw, 3rem);
+		}
+
+		.project-card-map .project-copy h3 {
+			font-size: clamp(1.45rem, 7.2vw, 2.15rem);
+			line-height: 1.02;
 		}
 
 		.game-dev-card {
