@@ -101,7 +101,7 @@
 		name: 'Team Kily',
 		url: new URL(locale.current === 'en' ? '/en' : '/', page.url.origin).href,
 		logo: new URL('/favicon.svg', page.url.origin).href,
-		sameAs: ['https://github.com/flo-kayser', 'https://www.instagram.com/flo.kysr/']
+		sameAs: ['https://github.com/team-kily', 'https://www.instagram.com/flo.kysr/']
 	});
 
 	$effect(() => {

@@ -213,11 +213,6 @@
 	});
 </script>
 
-<svelte:head>
-	<title>{pageContent.title} | Team Kily</title>
-	<meta name="description" content={pageContent.intro} />
-</svelte:head>
-
 <main class="legal-page">
 	<header>
 		<p class="eyebrow">
