@@ -1955,7 +1955,15 @@
 		}
 
 		.project-copy {
+			display: grid;
+			grid-template-columns: auto minmax(0, 1fr);
+			align-items: end;
+			justify-content: initial;
 			padding: 1.5rem;
+		}
+
+		.project-copy > div {
+			min-width: 0;
 		}
 
 		.project-copy h3,
@@ -1964,7 +1972,7 @@
 		}
 
 		.project-card-map .project-copy h3 {
-			font-size: clamp(1.45rem, 7.2vw, 2.15rem);
+			font-size: clamp(1.45rem, 7vw, 2.05rem);
 			line-height: 1.02;
 		}
 
