@@ -640,9 +640,8 @@
 		left: var(--circle-x);
 		width: calc(var(--circle-radius) * 3.2);
 		height: calc(var(--circle-radius) * 4);
-		translate: -50% -50%;
 		opacity: 0;
-		transform: translateY(clamp(3rem, 7svh, 5rem)) scale(0.95);
+		transform: translate(-50%, -50%) translateY(clamp(3rem, 7svh, 5rem)) scale(0.95);
 		transition:
 			opacity 560ms ease 150ms,
 			transform 900ms cubic-bezier(0.16, 1, 0.3, 1) 150ms;
@@ -650,7 +649,7 @@
 
 	.hero-visual.ready .squirrel-stage {
 		opacity: 1;
-		transform: translateY(0) scale(1);
+		transform: translate(-50%, -50%) translateY(0) scale(1);
 	}
 
 	section.projects-section {
@@ -872,9 +871,8 @@
 		z-index: 1;
 		width: min(92cqw, 143.5cqh);
 		aspect-ratio: 1.65;
-		translate: -50% -50%;
 		filter: drop-shadow(0 1.4rem 1.1rem rgb(0 0 0 / 0.24));
-		transform: rotate(-3deg) scale(0.96);
+		transform: translate(-50%, -50%) rotate(-3deg) scale(0.96);
 		transform-style: preserve-3d;
 		transition:
 			transform 1300ms cubic-bezier(0.18, 0.76, 0.2, 1),
@@ -883,7 +881,7 @@
 
 	.animated-book.open {
 		filter: drop-shadow(0 1.8rem 1.5rem rgb(0 0 0 / 0.2));
-		transform: rotate(0deg) scale(1.03);
+		transform: translate(-50%, -50%) rotate(0deg) scale(1.03);
 	}
 
 	.book-back-cover,
@@ -1581,6 +1579,10 @@
 		.squirrel-stage {
 			transform: none;
 			transition: opacity 180ms ease;
+		}
+
+		.squirrel-stage {
+			transform: translate(-50%, -50%);
 		}
 	}
 
