@@ -1,7 +1,7 @@
 export default {
 	eyebrow: 'Contact',
 	headline: 'Let’s build something.',
-	intro: 'An idea, a project or simply a question? Send me a message right here.',
+	intro: 'An idea, a project or simply a question? Send us a message right here.',
 	name: 'Name',
 	email: 'Email',
 	message: 'Message',
