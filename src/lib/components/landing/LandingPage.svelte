@@ -1,5 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
+	import {
+		siDrupal,
+		siGooglesearchconsole,
+		siJavascript,
+		siOpenapiinitiative,
+		siPhp,
+		siPostgresql,
+		siSvelte,
+		siTypo3
+	} from 'simple-icons';
 	import Container from '$lib/components/shared/Container.svelte';
 	import AboutPortrait from './portraits/AboutPortrait.svelte';
 	import AppIcon from '$lib/components/shared/AppIcon.svelte';
@@ -28,6 +38,16 @@
 		{ src: '/videos/squirrel-cinematic-idle.webp', duration: 10000 }
 	];
 	const bookClips = ['/videos/c_book_1.mp4', '/videos/c_book_2.mp4', '/videos/c_book_3.mp4'];
+	const skills = [
+		siSvelte,
+		siJavascript,
+		siTypo3,
+		siDrupal,
+		siPhp,
+		{ ...siGooglesearchconsole, title: 'SEO' },
+		{ ...siOpenapiinitiative, title: 'API' },
+		{ ...siPostgresql, title: 'DB' }
+	];
 
 	function clearGameClipSchedule() {
 		gameClipTimers.forEach(clearTimeout);
@@ -373,14 +393,11 @@
 									</div>
 								</div>
 							</article>
-							<article class="project-card project-card-small project-card-violet">
+							<article class="project-card project-card-small project-card-violet project-card-map">
 								<div class="project-orbit" aria-hidden="true"><span></span></div>
 								<div class="project-copy">
 									<span class="project-index">02</span>
 									<div>
-										<p class="project-type">
-											<ScrambleText text={t('projects.second_type')} lang={locale.current} />
-										</p>
 										<h3>
 											<ScrambleText text={t('projects.second_title')} lang={locale.current} />
 										</h3>
@@ -391,30 +408,55 @@
 												nowrap={false}
 											/>
 										</p>
+										<a
+											class="project-link-slot"
+											href="https://map.team-kily.de/"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<ScrambleText text={t('projects.second_link')} lang={locale.current} inline />
+											<span aria-hidden="true">↗</span>
+										</a>
 									</div>
 								</div>
 							</article>
-							<article class="project-card project-card-small project-card-light">
-								<div class="project-marks" aria-hidden="true">
-									<span></span><span></span><span></span>
-								</div>
-								<div class="project-copy">
-									<span class="project-index">03</span>
-									<div>
+							<article class="project-card project-card-small project-card-light skills-card">
+								<span class="project-index">03</span>
+								<div class="skills-content">
+									<div class="skills-heading">
 										<p class="project-type">
-											<ScrambleText text={t('projects.third_type')} lang={locale.current} />
+											<ScrambleText text={t('projects.skills_type')} lang={locale.current} />
 										</p>
-										<h3>
-											<ScrambleText text={t('projects.third_title')} lang={locale.current} />
-										</h3>
-										<p>
-											<ScrambleText
-												text={t('projects.third_description')}
-												lang={locale.current}
-												nowrap={false}
-											/>
-										</p>
+										<h3><ScrambleText text={t('projects.skills_title')} lang={locale.current} /></h3>
 									</div>
+									<ul class="skills-list" aria-label={t('projects.skills_title')}>
+										{#each skills as skill}
+											<li style={`--skill-color: #${skill.hex}`}>
+												<svg viewBox="0 0 24 24" aria-hidden="true">
+													<path d={skill.path}></path>
+												</svg>
+												<span>{skill.title}</span>
+											</li>
+										{/each}
+									</ul>
+									<p class="skills-agency">
+										<ScrambleText
+											text={t('projects.skills_agency_before')}
+											lang={locale.current}
+											inline
+										/>
+										<a
+											href="https://www.xima.de/leistungen/typo3-agentur"
+											target="_blank"
+											rel="noopener noreferrer"
+											>{t('projects.skills_agency_link')} ↗</a
+										>
+										<ScrambleText
+											text={t('projects.skills_agency_after')}
+											lang={locale.current}
+											inline
+										/>
+									</p>
 								</div>
 							</article>
 						</div>
@@ -812,6 +854,14 @@
 		font-size: clamp(1.8rem, 2.7vw, 3.25rem);
 	}
 
+	.project-card-map .project-copy h3 {
+		max-width: 100%;
+		font-size: clamp(1.55rem, 2.15vw, 2.6rem);
+		line-height: 1;
+		text-wrap: balance;
+		overflow-wrap: anywhere;
+	}
+
 	.project-card-violet {
 		background: var(--color-accent);
 	}
@@ -1051,27 +1101,66 @@
 		background: var(--color-brand);
 	}
 
-	.project-marks {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
+	.skills-card {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: clamp(1rem, 1.6vw, 1.5rem);
+		padding: clamp(1.35rem, 2.2vw, 2.25rem);
+	}
+
+	.skills-content {
+		display: grid;
+		min-width: 0;
+		align-content: space-between;
+		gap: clamp(0.75rem, 1.2vw, 1rem);
+	}
+
+	.skills-heading h3 {
+		font-size: clamp(1.75rem, 2.5vw, 3rem);
+		line-height: 0.95;
+		letter-spacing: -0.055em;
+	}
+
+	.skills-list {
 		display: flex;
-		gap: 0.45rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
 
-	.project-marks span {
-		display: block;
-		width: clamp(1.4rem, 2vw, 2.2rem);
-		aspect-ratio: 1;
-		border-radius: 50%;
-		background: var(--color-brand);
+	.skills-list li {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.38rem 0.62rem;
+		border: 1px solid color-mix(in srgb, var(--color-dark) 12%, transparent);
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--color-light) 68%, transparent);
+		font-size: clamp(0.68rem, 0.85vw, 0.8rem);
+		font-weight: 700;
 	}
 
-	.project-marks span:nth-child(2) {
-		opacity: 0.55;
+	.skills-list svg {
+		width: 1rem;
+		height: 1rem;
+		fill: var(--skill-color);
 	}
-	.project-marks span:nth-child(3) {
-		opacity: 0.22;
+
+	.skills-agency {
+		max-width: 28rem;
+		font-size: clamp(0.72rem, 0.9vw, 0.85rem);
+		line-height: 1.4;
+		color: color-mix(in srgb, var(--color-dark) 70%, transparent);
+	}
+
+	.skills-agency a {
+		color: var(--color-accent);
+		font-weight: 750;
+		text-decoration: underline;
+		text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+		text-underline-offset: 0.18em;
 	}
 
 	section.game-dev-section {
