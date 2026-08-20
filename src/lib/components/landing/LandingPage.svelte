@@ -399,7 +399,11 @@
 									<span class="project-index">02</span>
 									<div>
 										<h3>
-											<ScrambleText text={t('projects.second_title')} lang={locale.current} />
+											<ScrambleText
+												text={t('projects.second_title')}
+												lang={locale.current}
+												nowrap={false}
+											/>
 										</h3>
 										<p>
 											<ScrambleText
